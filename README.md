@@ -21,8 +21,31 @@ pip install virtualenv
 4. Each person opens up the project in Pycharm and links up the project to the virtual environment: PyCharm > Settings > Python > Interpreter > Add Interpreter > Add Local Interpreter > Select Existing > Select the path to the virtual environment python. Example: /Users/gyoo/projects/sales-pipeline-forecasting/venv/bin/python 
 5. Each person creates a folder called 'data' and adds the downloaded .csv files to it
 
-Setting up a virtual environment for the first time, using Python 3.14
+#### Setting up a virtual environment for the first time, using Python 3.14
+The easy way... Python 3.14 already has the alias 'python3'. So if you use 'python3', you get Python 3.14.
 ```commandline
+# use which to get the version of an executable (like python3)
+which python3
+
+# you should get a path to a python executable, it might look something like '/opt/homebrew/bin/python3.14'
+# copy this entire path into terminal
+/opt/homebrew/bin/python3.14
+
+# if this is Python3.14, it will look like this:
+# Python 3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 17.0.0 (clang-1700.6.4.2)] on darwin
+# Type "help", "copyright", "credits" or "license" for more information.
+
+# make sure you are IN the project root
+cd sales-pipeline-forecasting
+
+# create the virtual environment, name it "venv", using 
+virtualenv venv --python  $(which python3)
+```
+
+Easy way doesn't work? That's probably because the alias 'python3' is referring to a different version. Find out the exact path of the Python 3.14 executable and pass that to the `--python` flag
+```commandline
+# Get the path of the python executable through any means possible. It might look like '/opt/homebrew/bin/python3.14'. Save this path.
+
 # make sure you are IN the project root
 cd sales-pipeline-forecasting
 
