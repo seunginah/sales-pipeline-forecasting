@@ -19,6 +19,7 @@ pip install virtualenv
 2. Each person on the team opens the project on their local computer, using Github Desktop
 3. Each person sets up a virtual environment, using `virtualenv` and the same python version as everyone else (see steps below)
 4. Each person opens up the project in Pycharm and links up the project to the virtual environment: PyCharm > Settings > Python > Interpreter > Add Interpreter > Add Local Interpreter > Select Existing > Select the path to the virtual environment python. Example: /Users/gyoo/projects/sales-pipeline-forecasting/venv/bin/python 
+5. Each person creates a folder called 'data' and adds the downloaded .csv files to it
 
 Setting up a virtual environment for the first time, using Python 3.14
 ```commandline
